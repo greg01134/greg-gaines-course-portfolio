@@ -14,7 +14,7 @@ body {
     margin: 0 auto;            
     padding: 32px;
     background-color: #ffffff;
-    border: 4px solid cyan;
+    border: 4px solid rgb(4, 20, 110);
 }
 
 .card h1 {
