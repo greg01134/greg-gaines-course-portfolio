@@ -61,7 +61,7 @@ nav a:hover {
 /* Hero Section */
 .hero {
     /* Uses the specified training client image with a dark overlay for text readability */
-    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.8)), url('training-client.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.8)), url('solo-photo.jpg') center/cover no-repeat;
     height: 70vh;
     display: flex;
     flex-direction: column;
