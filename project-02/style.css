@@ -1,0 +1,213 @@
+/* Root Variables for Dark Theme */
+:root {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --text-light: #ffffff;
+    --accent-color: #cc0000; /* Bold Red */
+    --card-bg: #1e1e1e;
+    --nav-bg: #0a0a0a;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--nav-bg);
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+header h1 {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Required Project 02 CSS :hover Transition */
+nav a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Hero Section */
+.hero {
+    /* Uses the specified training client image with a dark overlay for text readability */
+    background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.8)), url('training-client.jpg') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    color: var(--text-light);
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    color: #cccccc;
+}
+
+/* General Layout */
+main {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    color: var(--text-light);
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+/* Image Grids for About Page */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.grid-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+/* Project Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    padding: 2.5rem 2rem;
+    border-radius: 6px;
+    border: 1px solid #333;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* Required Project 02 CSS :hover Transition */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.8);
+    border-color: var(--accent-color);
+}
+
+.project-card h3 {
+    color: var(--text-light);
+    margin-top: 0;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    color: #aaaaaa;
+}
+
+/* Forms & Contact */
+.contact-container {
+    background-color: var(--card-bg);
+    padding: 3rem;
+    border-radius: 6px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    padding: 10px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #a00000;
+}
+
+/* Footer */
+footer {
+    background-color: var(--nav-bg);
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #333;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Required Project 02 Responsive Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav {
+        margin-top: 1.5rem;
+    }
+    
+    nav a {
+        margin: 0 10px;
+        font-size: 0.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}
